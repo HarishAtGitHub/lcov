@@ -2799,7 +2799,7 @@ sub get_source_data($)
 	local *HANDLE;
 
 	if (!open(HANDLE, "<", $filename)) {
-		warn("WARNING: could not open $filename\n");
+		warn("WARNING: could not open $filename .  $! \n");
 		return;
 	}
 	while (<HANDLE>) {
